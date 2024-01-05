@@ -1326,10 +1326,15 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 /* harmony import */ var _actions_exec__WEBPACK_IMPORTED_MODULE_0__ = __nccwpck_require__(514);
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_1__ = __nccwpck_require__(147);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_2__ = __nccwpck_require__(17);
+
+
+
 
 (async () => {
     const res = await _actions_exec__WEBPACK_IMPORTED_MODULE_0__.exec('git diff --name-only HEAD HEAD~1');
-    console.log(res);
+    fs__WEBPACK_IMPORTED_MODULE_1__.writeFileSync(path__WEBPACK_IMPORTED_MODULE_2__.join(path__WEBPACK_IMPORTED_MODULE_2__.resolve(), 'test.json'), res);
 })();
 
 })();
