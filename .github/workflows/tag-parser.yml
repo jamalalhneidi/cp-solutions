@@ -10,7 +10,9 @@ jobs:
             - uses: actions/checkout@v1
             - name: Tag Parser
               uses: ./.github/actions/tag-parser
-            - run: git remote set-url origin ${{ secrets.url }}
+            - run: |
+                  git config --global user.email "jamal.alhneidi@gmail.com"
+                  git config --global user.name "Jamal Alhneidi"
             - run: git status
             - run: git add .
             - run: git commit -m "tag parser auto commit"
