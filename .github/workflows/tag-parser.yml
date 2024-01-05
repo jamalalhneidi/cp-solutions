@@ -7,6 +7,6 @@ jobs:
         name: Tag Parser
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v2.3.4
+            - uses: actions/checkout@v1
             - name: Tag Parser
-              uses: ./.github/actions/tag-parser
+              uses: ./.github/actions/tag-parser/
