@@ -1,0 +1,5 @@
+name: 'Tag Parser'
+description: 'Parse problems tags and produce a json file'
+runs:
+    using: 'node20'
+    main: 'dist/index.js'
