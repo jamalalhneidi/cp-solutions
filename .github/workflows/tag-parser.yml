@@ -6,6 +6,6 @@ jobs:
     tag-parser:
         name: Tag Parser
         runs-on: ubuntu-latest
-		steps:
-			- name: Tag Parser
-			  uses: link-/cp-solutions-tag-parser@main
+        steps:
+            - name: Tag Parser
+              uses: link-/cp-solutions-tag-parser@main
