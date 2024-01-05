@@ -1334,6 +1334,7 @@ var __webpack_exports__ = {};
 
 (async () => {
     const res = await _actions_exec__WEBPACK_IMPORTED_MODULE_0__.exec('git diff --name-only HEAD HEAD~1');
+    console.log(`writing file to ${path__WEBPACK_IMPORTED_MODULE_2__.join(path__WEBPACK_IMPORTED_MODULE_2__.resolve(), 'test.json')}`);
     fs__WEBPACK_IMPORTED_MODULE_1__.writeFileSync(
         path__WEBPACK_IMPORTED_MODULE_2__.join(path__WEBPACK_IMPORTED_MODULE_2__.resolve(), 'test.json'),
         JSON.stringify(res)
