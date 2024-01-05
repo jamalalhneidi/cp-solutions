@@ -1,0 +1,11 @@
+name: tag-parser
+
+on: push
+
+jobs:
+    tag-parser:
+        name: Tag Parser
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run parser
+              run: tag-parser/dist/index.js
