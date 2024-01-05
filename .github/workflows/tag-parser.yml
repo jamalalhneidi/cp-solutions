@@ -16,4 +16,4 @@ jobs:
             - run: git status
             - run: git add .
             - run: git commit -m "tag parser auto commit"
-            - run: git push
+            - run: git push origin HEAD:main
