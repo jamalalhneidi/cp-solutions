@@ -7,5 +7,7 @@ jobs:
         name: Tag Parser
         runs-on: ubuntu-latest
         steps:
-            - name: Run parser
-              run: tag-parser/dist/index.js
+            - name: Change directory
+              run: cd tag-parser
+            - name: Run parse
+              run: npm run start
