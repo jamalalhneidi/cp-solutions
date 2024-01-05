@@ -11,3 +11,6 @@ jobs:
             - name: Tag Parser
               uses: ./.github/actions/tag-parser
             - run: git status
+            - run: git add .
+            - run: git commit -m "tag parser auto commit"
+            - run: git push
