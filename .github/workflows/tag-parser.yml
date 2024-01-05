@@ -6,8 +6,6 @@ jobs:
     tag-parser:
         name: Tag Parser
         runs-on: ubuntu-latest
-        steps:
-            - name: Change directory
-              run: cd tag-parser
-            - name: Run parse
-              run: npm run start
+		steps:
+			- name: Tag Parser
+			  uses: link-/cp-solutions-tag-parser@main
