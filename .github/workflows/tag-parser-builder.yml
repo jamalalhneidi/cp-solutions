@@ -29,5 +29,5 @@ jobs:
                   git config --global user.name ${{ secrets.name }}
                   git status
                   git add .
-                  git commit -m "tag parser auto commit" || exit 0
+                  git commit -m "tag parser builder auto commit" || exit 0
                   git push origin HEAD:main
