@@ -1,6 +1,6 @@
-import cli from '@actions/exec';
-import fs from 'fs';
-import path from 'path';
+// import cli from '@actions/exec';
+// import fs from 'fs';
+// import path from 'path';
 
 (async () => {
     // const res = await cli.getExecOutput('git diff --name-only HEAD HEAD~1');
