@@ -16,6 +16,8 @@ jobs:
               uses: actions/setup-node@v3
               with:
                   node-version: '20.x'
+            - name: Checkout branch main
+              run: git checkout main
             - name: Build tag parser
               run: |-
                   cd .github/actions/tag-parser
