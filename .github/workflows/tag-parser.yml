@@ -15,7 +15,6 @@ jobs:
                   cd .github/actions/tag-parser
                   npm ci
                   npm run build
-                  cd ../../..
             - name: Parse solutions
               uses: ./.github/actions/tag-parser
             - name: Commit and push
