@@ -30,4 +30,4 @@ jobs:
                   git status
                   git add .github/actions/tag-parser/dist/
                   git commit -m "tag parser builder auto commit" || exit 0
-                  git push origin HEAD:main
+                  git push
