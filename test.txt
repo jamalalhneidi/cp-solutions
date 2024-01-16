@@ -1,0 +1,8 @@
+.github/actions/tag-parser/.prettierrc.json
+.github/actions/tag-parser/action.yml
+.github/actions/tag-parser/package-lock.json
+.github/actions/tag-parser/package.json
+.github/actions/tag-parser/src/index.js
+.github/workflows/tag-parser.yml
+.gitignore
+README.md
