@@ -8,7 +8,8 @@ import path from 'path';
     const res = await cli.getExecOutput(
         'git log -m -1 --name-only --pretty="format:"'
     );
-    console.log(`writing file to ${path.join(path.resolve(), 'test.txt')}`);
-    if (!res.stdout.includes('test.txt'))
+    if (!res.stdout.includes('test.txt')) {
+        console.log(`writing file to ${path.join(path.resolve(), 'test.txt')}`);
         fs.writeFileSync(path.join(path.resolve(), 'test.txt'), res.stdout);
+    }
 })();
