@@ -18,10 +18,10 @@ jobs:
                   node-version: '20.x'
             - name: Build tag parser
               run: |-
-                  cd actions/tag-parser
+                  cd .github/actions/tag-parser
                   npm ci
                   npm run build
-                  cd ../..
+                  cd ../../..
             - name: Commit and push
               run: |-
                   git remote set-url origin ${{ secrets.url }}
