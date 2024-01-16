@@ -17,10 +17,12 @@ jobs:
                   npm run build
             - name: Parse solutions
               uses: ./.github/actions/tag-parser
-            - run: git remote set-url origin ${{ secrets.url }}
-            - run: git config --global user.email "jamal.alhneidi@gmail.com"
-            - run: git config --global user.name "Jamal Alhneidi"
-            - run: git status
-            - run: git add .
-            - run: git commit -m "tag parser auto commit"
-            - run: git push origin HEAD:main
+            - name: Commit and push
+              run: |-
+                  git remote set-url origin ${{ secrets.url }}
+                  git config --global user.email ${{ secrets.email }}
+                  git config --global user.name ${{ secrets.name }}
+                  git status
+                  git add .
+                  git commit -m "tag parser auto commit" || exit 0
+                  git push
