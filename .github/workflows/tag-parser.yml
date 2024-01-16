@@ -2,8 +2,6 @@ name: tag-parser
 
 on:
     push:
-        branches:
-            - sol
 
 jobs:
     tag-parser:
@@ -12,6 +10,12 @@ jobs:
         steps:
             - name: Checkout this repo
               uses: actions/checkout@v4
+            - name: Build
+              run: |-
+                  cd .github/actions/tag-parser
+                  npm ci
+                  npm run build
+                  cd ../../..
             - name: Parse solutions
               uses: ./.github/actions/tag-parser
             - name: Commit and push
